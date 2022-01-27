@@ -15,9 +15,9 @@ const UnauthorizedModal = ({ setShowModal }) => {
                     <div className='inline w-[32px] h-[32px] flex items-center justify-center rounded-full bg-[#FFF0F0]'>
                         <Warning className='w-[20px] h-[20px]'/>
                     </div>
-                    <div className='flex-1'>
-                        <h3 className='pb-2'>You’re Not Verified</h3>
-                        <p className='body2 pb-4'>
+                    <div className='flex-1 space-y-2'>
+                        <h3>You’re Not Verified</h3>
+                        <p className='body2'>
                             It seems we do not verify you to use AstroGen or you’re using a 
                             different NEAR wallet than the one you authenticated with. 
                             If that is the case, please login with the wallet you 
