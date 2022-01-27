@@ -13,6 +13,12 @@ const Navbar = (props) => {
         <div className='bg-white flex justify-center'>
           <div className='w-full max-w-7xl flex relative place-items-center justify-between px-4 lg:px-24 py-2'>
             <img src={logo} alt='logo' />
+            {
+              props.showConnectButton ?
+                <Button type='solid' className='hidden lg:block' onClick={() => { }}>
+                  Connect My Wallet
+                </Button> : null
+            }
             <div className='lg:hidden'>
               <Hamburger toggled={isOpen} toggle={setOpen} />
             </div>

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import * as history from 'history';
 import Dashboard from './pages/Dashboard';
 import Project from './pages/Project';
+import Mint from './pages/Mint';
 import Navbar from './common/Navbar';
 
 function App() {
@@ -26,6 +27,14 @@ function App() {
             element={
               <Navbar>
                 <Project />
+              </Navbar>
+            }
+          />
+          <Route
+            path='/mint'
+            element={
+              <Navbar showConnectButton={true}>
+                <Mint />
               </Navbar>
             }
           />
