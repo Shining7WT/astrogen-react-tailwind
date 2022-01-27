@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import Button from '../../../common/Button';
 import UnauthorizedModal from './UnauthorizedModal';
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
 
-    const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
      <div className='px-0 md:px-12 lg:px-24 w-full max-w-7xl'>
         <div className='w-full flex justify-end gap-8 py-8 px-4 md:px-0'>
           <div className='block'>
-            <Button type='outline' onClick={() => {}}>
+            <Button type='outline' onClick={() => navigate('/projects')}>
                 Connect My Wallet
             </Button>
           </div>
