@@ -4,6 +4,7 @@ import * as history from 'history';
 import Dashboard from './pages/Dashboard';
 import Project from './pages/Project';
 import Navbar from './common/Navbar';
+import ProjectDashboard from './pages/ProjectDashboard';
 
 function App() {
   const Loader = () => {
@@ -26,6 +27,14 @@ function App() {
             element={
               <Navbar>
                 <Project />
+              </Navbar>
+            }
+          />
+          <Route
+            path='/project-dashboard'
+            element={
+              <Navbar>
+                <ProjectDashboard />
               </Navbar>
             }
           />
