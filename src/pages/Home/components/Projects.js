@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Button from '../../common/Button';
-import Tabs from './components/Tabs';
-import Completed from './components/Completed';
-import InProgress from './components/InProgress';
+import Button from '../../../common/Button';
+import Tabs from './Tabs';
+import Completed from './Completed';
+import InProgress from './InProgress';
 
 
 const Projects = () => {
