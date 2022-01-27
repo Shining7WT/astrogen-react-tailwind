@@ -18,7 +18,7 @@ function App() {
             path='/'
             element={
               <Navbar>
-                <Dashboard />
+                <ProjectDashboard />
               </Navbar>
             }
           />
@@ -31,10 +31,10 @@ function App() {
             }
           />
           <Route
-            path='/project-dashboard'
+            path='/create-project'
             element={
               <Navbar>
-                <ProjectDashboard />
+                <Dashboard />
               </Navbar>
             }
           />
