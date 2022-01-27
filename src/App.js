@@ -4,7 +4,7 @@ import * as history from 'history';
 import Dashboard from './pages/Dashboard';
 import Project from './pages/Project';
 import Navbar from './common/Navbar';
-import ProjectDashboard from './pages/ProjectDashboard';
+import Home from './pages/Home';
 
 function App() {
   const Loader = () => {
@@ -18,7 +18,7 @@ function App() {
             path='/'
             element={
               <Navbar>
-                <ProjectDashboard />
+                <Home />
               </Navbar>
             }
           />

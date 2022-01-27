@@ -1,7 +1,11 @@
-import React from 'react';
-import Button from '../../common/Button';
+import React, { useState } from 'react';
+import Button from '../../../common/Button';
+import UnauthorizedModal from './UnauthorizedModal';
 
-const ProjectDashboard = () => {
+const Main = () => {
+
+    const [showModal, setShowModal] = useState(false);
+
   return (
     <>
      <div className='px-0 md:px-12 lg:px-24 w-full max-w-7xl'>
@@ -18,12 +22,13 @@ const ProjectDashboard = () => {
             <p className='body2 pb-4'>
                 All is set to create your Generative NFT <br /> Collection With Zero Code.
             </p>
-            <Button type='solid' onClick={() => {}}>Login With My Wallet</Button>
+            <Button type='solid' onClick={() => setShowModal(true)}>Login With My Wallet</Button>
           </div>
         </div>
       </div>
+      { showModal && <UnauthorizedModal setShowModal={setShowModal} /> }
     </>
   )
 }
 
-export default ProjectDashboard;
+export default Main;
