@@ -12,7 +12,7 @@ const UnauthorizedModal = ({ setShowModal }) => {
             ></div>
             <div className='relative max-w-2xl bg-background px-[16px] sm:px-[28px] py-[24px] mx-3 my-8 rounded-md bg-opacity-100 z-10'>
                 <div className='flex flex-row gap-[22px]'>
-                    <div className='inline'>
+                    <div className='inline pt-[4px]'>
                         <Warning className='w-[20px] h-[20px]'/>
                     </div>
                     <div className='flex-1'>
