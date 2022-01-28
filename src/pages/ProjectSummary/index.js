@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../../common/Button';
 import logo from '../../asset/images/Logo.png';
 import { useNavigate } from 'react-router-dom';
-
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const ProjectSummary = () => {
 
@@ -109,13 +109,14 @@ const ProjectSummary = () => {
                                     <p className='body1 !text-[#565379] w-full lg:w-auto'>
                                         Astrogen.com/Collection Name
                                     </p>
-                                    <Button
-                                        className={'!py-1 px-4 mt-4 lg:mt-0'}
-                                        type={'solid'}
-                                        onClick={() => { }}
-                                    >
-                                        Copy Link
-                                    </Button>
+                                    <CopyToClipboard text={'Astrogen.com/Collection Name'}>
+                                        <Button
+                                            className={'!py-1 px-4 mt-4 lg:mt-0'}
+                                            type={'solid'}
+                                        >
+                                            Copy Link
+                                        </Button>
+                                    </CopyToClipboard>
                                 </div>
                             </div>
                             <div className='pt-[24px] pb-[90px] space-y-2'>
@@ -124,13 +125,14 @@ const ProjectSummary = () => {
                                     <p className='body1 !text-[#565379] w-full lg:w-auto'>
                                         Astrogen.com/Collection Name
                                     </p>
-                                    <Button
-                                        className={'!py-1 px-4 mt-4 lg:mt-0'}
-                                        type={'solid'}
-                                        onClick={() => { }}
-                                    >
-                                        Copy Link
-                                    </Button>
+                                    <CopyToClipboard text={'Astrogen.com/Collection Name'}>
+                                        <Button
+                                            className={'!py-1 px-4 mt-4 lg:mt-0'}
+                                            type={'solid'}
+                                        >
+                                            Copy Link
+                                        </Button>
+                                    </CopyToClipboard>
                                 </div>
                             </div>
                         </div>
