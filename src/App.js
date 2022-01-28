@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Project from './pages/Project';
 import Navbar from './common/Navbar';
 import Home from './pages/Home';
+import ProjectSummary from './pages/ProjectSummary';
 
 function App() {
   const Loader = () => {
@@ -24,6 +25,14 @@ function App() {
           />
           <Route
             path='/project-detail'
+            element={
+              <Navbar>
+                <Project />
+              </Navbar>
+            }
+          />
+          <Route
+            path='/project-summary'
             element={
               <Navbar>
                 <Project />

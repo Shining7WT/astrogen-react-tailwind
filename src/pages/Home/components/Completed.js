@@ -1,9 +1,12 @@
 import React from 'react';
 import Button from '../../../common/Button';
 import { ReactComponent as Edit } from '../../../asset/svg/Edit.svg';
+import { useNavigate } from 'react-router-dom';
 
 
 const Completed = () => {
+
+  const navigate = useNavigate();
 
   const renderProjectCard = (icon) => {
     return (
@@ -36,7 +39,7 @@ const Completed = () => {
           </div>
         </div>
         <div className='w-full'>
-          <Button type='solid' className='px-2 py-2 w-full' onClick={() => { }}>View Summary</Button>
+          <Button type='solid' className='px-2 py-2 w-full' onClick={() => navigate('/project-summary')}>View Summary</Button>
         </div>
       </div>
     )

@@ -4,8 +4,7 @@ import Tabs from './Tabs';
 import Completed from './Completed';
 import InProgress from './InProgress';
 
-
-const Projects = () => {
+const Projects = ({ setCurrentState }) => {
     const [activeTab, setActiveTab] = useState(1);
 
     return (
@@ -21,13 +20,9 @@ const Projects = () => {
                 <div className='bg-white rounded-md h-[75vh]'>
                     <Tabs setActiveTab={setActiveTab} activeTab={activeTab} />
                     {activeTab === 1 ? (
-                        <InProgress
-
-                        />
+                        <InProgress />
                     ) : activeTab === 2 ? (
-                        <Completed
-
-                        />
+                        <Completed />
                     ) : null
                     }
                 </div>

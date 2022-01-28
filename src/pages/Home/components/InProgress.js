@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Button from '../../../common/Button';
+import { useNavigate } from 'react-router-dom';
 
 const InProgress = () => {
 
     const [showProjects, setShowProjects] = useState(true);
+    const navigate = useNavigate();
 
     const renderProjectCard = () => {
         return (
@@ -23,12 +25,12 @@ const InProgress = () => {
                             <span className='text-[16px] leading-[28px] text-[#F6F5FF] inline'>12%</span>
                         </div>
                     </div>
-                    <Button type='solid' className='px-2 py-2' onClick={() => {}}>Continue</Button>
+                    <Button type='solid' className='px-2 py-2' onClick={() => navigate('/create-project')}>Continue</Button>
                 </div>
             </div>
         )
     }
-    
+
     return (
         <>
             {!showProjects ? <div className='flex flex-col items-center'>
@@ -37,7 +39,7 @@ const InProgress = () => {
                     <p className='body2 pb-4'>
                         You currently do not have a project in <br /> progress.
                     </p>
-                    <Button type='solid' onClick={() => setShowProjects(true)}>Create New Project</Button>
+                    <Button type='solid' onClick={() => navigate('/create-project')}>Create New Project</Button>
                 </div>
             </div>
                 :
