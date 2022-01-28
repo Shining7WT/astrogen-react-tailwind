@@ -5,6 +5,8 @@ import Dashboard from './pages/Dashboard';
 import Project from './pages/Project';
 import Mint from './pages/Mint';
 import Navbar from './common/Navbar';
+import Home from './pages/Home';
+import ProjectSummary from './pages/ProjectSummary';
 
 function App() {
   const Loader = () => {
@@ -18,7 +20,7 @@ function App() {
             path='/'
             element={
               <Navbar>
-                <Dashboard />
+                <Home />
               </Navbar>
             }
           />
@@ -27,6 +29,22 @@ function App() {
             element={
               <Navbar>
                 <Project />
+              </Navbar>
+            }
+          />
+          <Route
+            path='/project-summary'
+            element={
+              <Navbar>
+                <ProjectSummary />
+              </Navbar>
+            }
+          />
+          <Route
+            path='/create-project'
+            element={
+              <Navbar>
+                <Dashboard />
               </Navbar>
             }
           />
