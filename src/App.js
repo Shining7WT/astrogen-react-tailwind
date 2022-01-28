@@ -35,7 +35,7 @@ function App() {
             path='/project-summary'
             element={
               <Navbar>
-                <Project />
+                <ProjectSummary />
               </Navbar>
             }
           />
