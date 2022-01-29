@@ -1,37 +1,48 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import { Link, useNavigate } from 'react-router-dom';
-import Hamburger from 'hamburger-react';
+// import Hamburger from 'hamburger-react';
 
-import logo from '../asset/images/Logo.png';
+import astroGenLogo from '../asset/images/AstroGenLogo.png';
 import Button from './Button';
 
 const Navbar = (props) => {
-  const [isOpen, setOpen] = useState(false);
+  // const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <div className='bg-background min-h-screen'>
-        <div className='bg-white flex justify-center'>
-          <div className='w-full max-w-7xl flex relative place-items-center justify-between px-4 lg:px-24 py-2'>
-            <img src={logo} alt='logo' />
-            {
-              props.showConnectButton ?
-                <Button type='solid' className='hidden lg:block' onClick={() => { }}>
-                  Connect My Wallet
-                </Button> : null
-            }
-            <div className='lg:hidden'>
-              <Hamburger toggled={isOpen} toggle={setOpen} />
-            </div>
+      <div className="bg-primary">
+        <div className="bg-primary flex items-center justify-center">
+          <div className="w-full max-w-7xl flex relative place-items-center justify-between px-4 lg:px-24 py-2">
+            <img src={astroGenLogo} alt="logo" />
+            {props.walletConnected ? (
+              <Button
+                type="solid"
+                className="bg-white !text-primary"
+                onClick={() => {}}
+              >
+                Connect Wallet
+              </Button>
+            ) : (
+              <Button
+                type="outline"
+                className="text-white border-white"
+                onClick={() => {}}
+              >
+                astrogen.near
+              </Button>
+            )}
+            {/* <div className='lg:hidden'> */}
+            {/* <Hamburger toggled={isOpen} toggle={setOpen} /> */}
+            {/* </div> */}
           </div>
         </div>
-        {isOpen ? (
+        {/* {isOpen ? (
           <div className='h-screen w-full px-14 py-6 bg-white fixed z-20'>
-            <Button type='outline' className='w-full' onClick={() => { }}>
+            <Button type='outline' className='w-  full !text-primary' onClick={() => { }}>
               Create NEAR Wallet
             </Button>
           </div>
-        ) : null}
-        <div className='flex justify-center'>{props.children}</div>
+        ) : null} */}
+        <div className="flex justify-center">{props.children}</div>
       </div>
     </>
   );

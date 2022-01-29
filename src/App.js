@@ -4,8 +4,9 @@ import * as history from 'history';
 import Dashboard from './pages/Dashboard';
 import Project from './pages/Project';
 import Mint from './pages/Mint';
-import Navbar from './common/Navbar';
+import Layout from './common/Layout';
 import Home from './pages/Home';
+import Launchpad from './pages/Launchpad';
 import ProjectSummary from './pages/ProjectSummary';
 
 function App() {
@@ -19,41 +20,49 @@ function App() {
           <Route
             path='/'
             element={
-              <Navbar>
+              <Layout walletConnected={true}>
                 <Home />
-              </Navbar>
+              </Layout>
             }
           />
           <Route
             path='/project-detail'
             element={
-              <Navbar>
+              <Layout>
                 <Project />
-              </Navbar>
+              </Layout>
             }
           />
           <Route
             path='/project-summary'
             element={
-              <Navbar>
+              <Layout>
                 <ProjectSummary />
-              </Navbar>
+              </Layout>
             }
           />
           <Route
             path='/create-project'
             element={
-              <Navbar>
+              <Layout>
                 <Dashboard />
-              </Navbar>
+              </Layout>
             }
           />
           <Route
             path='/mint'
             element={
-              <Navbar showConnectButton={true}>
+              <Layout>
                 <Mint />
-              </Navbar>
+              </Layout>
+            }
+          />
+          <Route
+            path='/launchpad'
+            element={
+              <Layout>
+                <Launchpad />
+              </Layout>
             }
           />
         </Routes>

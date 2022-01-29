@@ -36,14 +36,6 @@ const Dashboard = () => {
   return (
     <>
       <div className='px-0 md:px-12 lg:px-24 w-full max-w-7xl'>
-        <div className='w-full flex justify-end gap-8 py-8 px-4 md:px-0'>
-          <div className='hidden lg:block'>
-            <Button type='outline' onClick={() => {}}>
-              Create NEAR Wallet
-            </Button>
-          </div>
-          <Button type='solid' onClick={() => {}}>Connect My Wallet</Button>
-        </div>
         <div className='bg-white pb-24 rounded-md'>
           <Tabs setActiveTab={setActiveTab} activeTab={activeTab} />
 
